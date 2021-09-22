@@ -1,37 +1,28 @@
 import React from "react";
-import { Text, StyleSheet, View, Button} from "react-native";
+import { Text, StyleSheet, View, Button } from "react-native";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation: { navigate } }) => {
   return (
     <View>
       <Text style={styles.text}>Hi there, this is Raph</Text>
 
-      <Button 
-        title="Go to Components Demo" 
-        onPress={() => navigation.navigate('Components')}
-        />
-      <Button 
-        title="Go to List Demo" 
-        onPress={() => navigation.navigate('List')}
-        />
-      <Button 
-        title="Go to Image Demo" 
-        onPress={() => navigation.navigate('Image')}
-        />
-      <Button 
-        title="Go to Counter  Demo" 
-        onPress={() => navigation.navigate('Counter')}
+      <Button
+        title="Go to Components Demo"
+        onPress={() => navigate("Components")}
       />
+      <Button title="Go to List Demo" onPress={() => navigate("List")} />
+      <Button title="Go to Image Demo" onPress={() => navigate("Image")} />
+      <Button title="Go to Counter  Demo" onPress={() => navigate("Counter")} />
+      <Button title="Go to Color  Demo" onPress={() => navigate("Color")} />
+      <Button title="Go to Square Demo" onPress={() => navigate("Square")} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30
-  }
+    fontSize: 30,
+  },
 });
 
 export default HomeScreen;
-
-
