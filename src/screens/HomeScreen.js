@@ -2,9 +2,13 @@ import React from "react";
 import { Text, StyleSheet, View, Button } from "react-native";
 
 const HomeScreen = ({ navigation: { navigate } }) => {
+  // destructuring styles
+  const { text } = styles;
   return (
     <View>
-      <Text style={styles.text}>Hi there, this is Raph</Text>
+      {/*  Non destructured styles */}
+      {/* <Text style={styles.text}>Hi there, this is Raph</Text> */}
+      <Text style={text}>Hi there, this is Raph</Text>
 
       <Button
         title="Go to Components Demo"
@@ -15,6 +19,7 @@ const HomeScreen = ({ navigation: { navigate } }) => {
       <Button title="Go to Counter  Demo" onPress={() => navigate("Counter")} />
       <Button title="Go to Color  Demo" onPress={() => navigate("Color")} />
       <Button title="Go to Square Demo" onPress={() => navigate("Square")} />
+      <Button title="Go to Text Demo" onPress={() => navigate("Text")} />
     </View>
   );
 };

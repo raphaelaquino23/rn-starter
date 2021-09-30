@@ -14,6 +14,10 @@ const ListScreen = () => {
     { name: "Friend #9", age: 22 },
   ];
 
+  //destructuring.
+  const { textStyle } = styles;
+  // Non-Destructured Code
+  // Was able to destructure textStyle but not friend and item
   return (
     <FlatList
       // horizontal = {true} // Can also just write horizontal
@@ -22,7 +26,7 @@ const ListScreen = () => {
       data={friends}
       renderItem={({ item }) => {
         return (
-          <Text style={styles.textStyle}>
+          <Text style={textStyle}>
             {item.name} - Age {item.age}
           </Text>
         );
@@ -34,6 +38,28 @@ const ListScreen = () => {
     />
   );
 };
+// attempt at destructuring
+//   return (
+//     <FlatList
+//       // horizontal = {true} // Can also just write horizontal
+//       //showsHorizontalScrollIndicator = {false}
+//       keyExtractor={friendName}
+//       data={friends}
+//       renderItem={({ item }) => {
+//         const { name, age } = item;
+//         return (
+//           <Text style={textStyle}>
+//             {name} - Age {age}
+//           </Text>
+//         );
+//       }}
+
+//       //Alternative code for renderItem
+//       //renderItem ={(element) => {}}
+//       // element === { item: { name: 'Friend #1'}, index: 0 }
+//     />
+//   );
+// };
 
 const styles = StyleSheet.create({
   textStyle: {
