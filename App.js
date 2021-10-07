@@ -13,10 +13,10 @@ const navigator = createStackNavigator(
   {
     Home: HomeScreen, 
     Components: ComponentsScreen,
-    List: ListScreen,
     Image: ImageScreen,
     Counter: CounterScreen,
     Color: ColorScreen,
+    List: ListScreen,
     Square: SquareScreen,
     Text: TextScreen
   },
